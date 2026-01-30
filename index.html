@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Valentine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="card1" class="card active" style="background-image: url('images/chocolate.jpg');">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1 class="cute-title">Happy Valentine's ❤️</h1>
+            <p class="cute-text">Life is sweeter with you.</p>
+            <div class="heart-icon">🍫</div>
+            <button class="btn" onclick="askQuestion('q1')">Take a Bite ➡️</button>
+        </div>
+        <div id="q1" class="question-box hidden">
+            <p class="q-text">Quick question...<br><strong>How much do I love you?</strong></p>
+            <button class="option-btn" onclick="wrongAnswer(this)">A little bit</button>
+            <button class="option-btn" onclick="correctAnswer('card2')">To Infinity & Beyond! 🚀</button>
+        </div>
+    </div>
+
+    <div id="card2" class="card" style="background-image: url('images/moon.jpg');">
+        <div class="overlay"></div>
+        <div class="stars"></div>
+        <div class="content">
+            <h1 class="cute-title">My Moon 🌙</h1>
+            <p class="cute-text">"In every universe, I'd find you."</p>
+            <button class="btn" onclick="askQuestion('q2')">Fly to Next Universe 🚀</button>
+        </div>
+        <div id="q2" class="question-box hidden">
+            <p class="q-text">Security Check! 🔒<br><strong>Who is the most beautiful girl?</strong></p>
+            <button class="option-btn" onclick="wrongAnswer(this)">Zendaya</button>
+            <button class="option-btn" onclick="correctAnswer('card-beg')">ME! (The Birthday Girl) 👸</button>
+        </div>
+    </div>
+
+    <div id="card-beg" class="card pink-bg">
+        <div class="content">
+            <img src="images/happy.gif" id="beg-img" class="gif-sticker">
+
+            <h1 class="cute-title" id="beg-title">Do you love me? 🥺</h1>
+            <p class="cute-text" id="beg-text">Please say yes!</p>
+
+            <div class="buttons-container">
+                <button class="btn yes-btn" onclick="showCard('card-ask')">YES! ❤️</button>
+                <button class="btn no-btn-static" onclick="begMore()">No 😢</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="card-ask" class="card pink-bg">
+        <div class="content">
+            <h1 class="cute-title">One Last Thing...</h1>
+            <p class="cute-text">Will you be my Valentine?</p>
+            <br>
+            <div class="buttons-container">
+                <button class="btn yes-btn" onclick="showCard('card3')">YES! ❤️</button>
+                <button class="btn no-btn" id="noBtn" onmouseover="moveButton()" onclick="moveButton()" ontouchstart="moveButton()">No 😢</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="card3" class="card red-bg">
+        <div class="content">
+            <img src="images/spiderman.png" class="spidey-img">
+            <div class="message-box">
+                <h1 class="cute-title">Happy Birthday Maggie! 🎂</h1>
+                <p class="cute-text">
+                    You said YES! (I knew you would).<br>
+                    You are my MJ, my best friend, and my world.
+                </p>
+                <p class="signature">- With Love, Amal ❤️</p>
+            </div>
+            <div id="confetti-container"></div>
+            <button class="btn yellow-btn" onclick="celebrate()">Tap for a Surprise 🎉</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
