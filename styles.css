@@ -60,6 +60,22 @@ body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family:
     transition: 0.1s;
 }
 
+/* Specific styling for the apology/kiss sections */
+#card-apology .cute-title {
+    text-shadow: none;
+}
+
+#card-kiss .heart-icon {
+    font-size: 5rem;
+    filter: drop-shadow(0 0 10px white);
+}
+
+/* Make sure the text on the red background is readable */
+.message-box p {
+    margin: 10px 0;
+    font-weight: 600;
+}
+
 /* SPIDEY & FINAL */
 .red-bg { background-color: #d32f2f; }
 .yellow-btn { background-color: #ffeb3b; color: #d32f2f; }
